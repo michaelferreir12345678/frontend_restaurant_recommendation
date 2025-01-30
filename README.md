@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# M&L - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o repositório do frontend do projeto **M&L**, uma aplicação web para avaliação e gerenciamento de restaurantes. O frontend foi desenvolvido utilizando tecnologias modernas e segue boas práticas de desenvolvimento.
 
-## Available Scripts
+## 🚀 Tecnologias Utilizadas
 
-In the project directory, you can run:
+Aqui estão as principais tecnologias e bibliotecas utilizadas no desenvolvimento do frontend:
 
-### `npm start`
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Material-UI (MUI)**: Biblioteca de componentes UI para React, seguindo o design system do Material Design.
+- **React Router**: Para gerenciamento de rotas na aplicação.
+- **Context API**: Para gerenciamento de estado global (como a lista de restaurantes).
+- **Axios**: Para requisições HTTP à API backend.
+- **Date-fns**: Para manipulação de datas.
+- **Google Maps API**: Para integração com a API do Google Places e autocomplete de endereços.
+- **React Places Autocomplete**: Para facilitar a integração com a API do Google Places.
+- **ESLint e Prettier**: Para padronização e linting do código.
+- **GitHub Actions**: Para CI/CD (Integração Contínua e Entrega Contínua).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A estrutura do projeto está organizada da seguinte forma:
 
-### `npm test`
+src/
+├── components/ # Componentes reutilizáveis
+│ ├── Header.js # Cabeçalho da aplicação
+│ ├── Footer.js # Rodapé da aplicação
+│ ├── RestaurantCard.js # Card de exibição de restaurantes
+│ └── RestaurantForm.js # Formulário de adição/edição de restaurantes
+├── pages/ # Páginas da aplicação
+│ └── HomePage.js # Página inicial
+├── services/ # Serviços de API
+│ └── apiService.js # Funções para chamadas à API
+├── context/ # Contextos globais
+│ └── RestaurantContext.js # Contexto para gerenciar restaurantes
+├── App.js # Componente principal da aplicação
+├── index.js # Ponto de entrada da aplicação
+└── styles/ # Estilos globais (se necessário)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🛠️ Como Executar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Siga os passos abaixo para configurar e executar o projeto localmente.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js**: Certifique-se de ter o Node.js instalado (versão 16 ou superior).
+- **Git**: Para clonar o repositório.
 
-### `npm run eject`
+### Passos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone o repositório**:
+   ```
+   git clone https://github.com/seu-usuario/mel-frontend.git
+   cd mel-frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Instale as dependências:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+npm install
+Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+env
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+REACT_APP_GOOGLE_MAPS_API_KEY=sua_chave_da_api_google_maps
+Inicie o servidor de desenvolvimento:
 
-### Code Splitting
+npm start
+Acesse a aplicação:
+Abra o navegador e acesse:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+http://localhost:3000
+🧪 Testes
+Para executar os testes automatizados, utilize o comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm test
+🚀 CI/CD
+O projeto utiliza GitHub Actions para integração contínua. Toda vez que um push é feito na branch main, os testes são executados automaticamente.
 
-### Advanced Configuration
+📝 Licença
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🤝 Contribuição
+Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 
-### Deployment
+Faça um fork do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Crie uma nova branch (git checkout -b feature/nova-feature).
 
-### `npm run build` fails to minify
+Commit suas alterações (git commit -m 'Adiciona nova feature').
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Push para a branch (git push origin feature/nova-feature).
+
+Abra um Pull Request.
+
+👨‍💻 Autor
+Seu Nome - GitHub | LinkedIn
+
+📌 Exemplo de Uso
+Adicionar um Restaurante
+Clique no botão "+" no canto inferior direito.
+
+Preencha o formulário com os detalhes do restaurante.
+
+Clique em "Salvar".
+
+Pesquisar Restaurantes
+Clique no ícone de lupa no cabeçalho.
+
+Digite o nome do restaurante na barra de pesquisa.
+
+A lista de restaurantes será filtrada automaticamente.
+
+Editar ou Excluir um Restaurante
+Clique no ícone de três pontos no card do restaurante.
+
+Escolha "Editar" para atualizar as informações ou "Excluir" para remover o restaurante.
+
+📸 Capturas de Tela
+Adicione aqui algumas capturas de tela da aplicação em funcionamento.
+
+🔗 Links Úteis
+Documentação do React
+
+Documentação do Material-UI
+
+Documentação do Google Maps API
